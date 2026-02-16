@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="nav.css">
+    <title>MyBrand</title>
+    <style>
+        /* Services Section Styles */
+.services-area {
+    padding: 140px 0;
+    background-color: #0f172a; /* This makes the background dark blue/black */
+    color: #ffffff; /* This makes the text white */
+}
+
+.services-top {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background: #1e293b;
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    border-color: #6366f1;
+}
+
+.service-icon {
+    color: #6366f1;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+    </style>
+</head>
+<body>
+<div>
+    <nav class="navbar">
+    <div class="logo">MyBrand</div>
+    <ul class="nav-links">
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Services.html" class="active">Services</a></li>
+        <li><a href="Login.html">Login</a></li>
+    </ul>
+</nav>
+</div>
+  <section id="services" class="services-area">
+    <div class="container">
+        <div class="services-top">
+            <h2 class="reveal">Solutions built for <br><span class="gradient-text">modern scale.</span></h2>
+            <p class="reveal">We don't just provide tools; we provide the foundation for your company's digital transformation.</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card reveal">
+                <div class="service-icon">01</div>
+                <h3>Cloud Strategy</h3>
+                <p>Migration and architecture design that grows with your user base.</p>
+                <a href="#" class="service-link">View Details →</a>
+            </div>
+
+            <div class="service-card active reveal">
+                <div class="service-icon">02</div>
+                <h3>UX/UI Design</h3>
+                <p>Creating interfaces that are scientifically proven to increase conversion.</p>
+                <a href="#" class="service-link">View Details →</a>
+            </div>
+
+            <div class="service-card reveal">
+                <div class="service-icon">03</div>
+                <h3>Data Security</h3>
+                <p>Enterprise-grade protection with automated threat detection.</p>
+                <a href="#" class="service-link">View Details →</a>
+            </div>
+        </div>
+    </div>
+</section>      
+</body>
+</html>

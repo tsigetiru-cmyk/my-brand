@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="nav.css">
+    <title>MyBrand</title>
+    <style>
+ :root {
+    --primary: #6366f1;
+    --primary-dark: #4f46e5;
+    --text-main: #1e293b;
+    --text-light: #64748b;
+    --bg: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg);
+    color: var(--text-main);
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navbar */
+.navbar {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0; width: 100%;
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(12px);
+    z-index: 100;
+}
+
+.flex-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text-main);
+}
+
+.logo span { color: var(--primary); }
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-light);
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.nav-links a:hover { color: var(--primary); }
+
+/* Hero Section */
+.hero {
+    padding: 160px 0 100px;
+    text-align: center;
+    background: radial-gradient(circle at top, #f5f3ff 0%, #ffffff 60%);
+}
+
+.hero-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    background: #eef2ff;
+    color: var(--primary);
+    border-radius: 100px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.hero h1 {
+    font-size: 4.5rem;
+    letter-spacing: -2px;
+    line-height: 1.1;
+    margin-bottom: 24px;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #6366f1, #a855f7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: var(--text-light);
+    max-width: 650px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+}
+
+/* Buttons */
+.btn-main {
+    background: var(--primary);
+    color: white;
+    padding: 16px 32px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.3);
+    transition: 0.3s;
+}
+
+.btn-main:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid #e2e8f0;
+    padding: 16px 32px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-left: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Mock UI Visual */
+.hero-visual {
+    margin-top: 80px;
+    height: 400px;
+    background: white;
+    border-radius: 20px 20px 0 0;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.1);
+}
+
+.mock-ui {
+    padding: 15px;
+    display: flex;
+    gap: 8px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.mock-dot { height: 10px; width: 10px; border-radius: 50%; }
+.red { background: #ff5f56; }
+.yellow { background: #ffbd2e; }
+.green { background: #27c93f; }
+
+/* Trust Bar */
+.trust-bar {
+    padding: 60px 0;
+    text-align: center;
+    background: #f8fafc;
+}
+
+.trust-bar p {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+.logos {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    opacity: 0.5;
+    font-weight: 800;
+    font-size: 1.2rem;
+}
+    </style>
+</head>
+<body>
+<div>
+  <nav class="navbar">
+    <div class="logo">MyBrand</div>
+     <ul class="nav-links">
+        <li><a href="Home.html" class="active">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Services.html">Services</a></li>
+        <li><a href="Login.html" >Login</a></li>
+     </ul>
+  </nav>
+  <div class="nav-actions">
+                <a href="#" class="btn-text">Sign In</a>
+                <a href="#" class="btn-small">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <div class="hero-badge">✨ New: Version 2.0 is here</div>
+            <h1>The future of team <br><span class="gradient-text">collaboration.</span></h1>
+            <p>Stop juggling between tabs. Bring your docs, tasks, and team chat into one unified workspace designed for modern speed.</p>
+            
+            <div class="hero-cta">
+                <button class="btn-main">Start for free</button>
+                <button class="btn-outline">Watch Demo</button>
+            </div>
+
+            <div class="hero-visual">
+                <div class="mock-ui">
+                    <div class="mock-dot red"></div>
+                    <div class="mock-dot yellow"></div>
+                    <div class="mock-dot green"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="trust-bar">
+        <p>Trusted by 10,000+ teams worldwide</p>
+        <div class="logos">
+            <span class="logo-item">VELOCITY</span>
+            <span class="logo-item">CLOUD</span>
+            <span class="logo-item">MINDSET</span>
+            <span class="logo-item">APEX</span>
+        </div>
+    </section>
+
+</body>
+</html>
+    </div>
+</section>
+</div>
+</body>
+</html>

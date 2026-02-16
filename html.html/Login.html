@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="nav.css">
+    <title>MyBrand</title>
+    <style>
+       /* Centering the login card on the page */
+body {
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* The main container */
+.Login {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 350px;
+}
+
+/* The "Login" header */
+.d {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* Label styling */
+label {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+/* Input field styling */
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box; /* Ensures padding doesn't break width */
+    transition: border-color 0.3s ease;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.1);
+}
+
+/* Checkbox styling */
+input[type="checkbox"] {
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+label[for="checkbox"] {
+    font-size: 0.85rem;
+    cursor: pointer;
+    vertical-align: middle;
+}
+#button{
+    padding-left:150px ;
+    padding-right: 159px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    justify-content: center;
+    border-radius: 20px;
+    border: none;
+    transition: 0.2s;
+}
+#button:hover{
+    border: solid 1px rgb(91, 125, 229);
+}
+    </style>
+</head>
+<body>
+    <div class="Login">
+        <div class="d">Login</div><br>
+        <div>
+            <form>
+                <label for="email">Email</label><br>
+                <input type="email" name="email" id="email" placeholder="Email"><br>
+                <label for="password">Password</label><br>
+                <input type="password" name="password" id="password" placeholder="password"><br>
+                <input type="checkbox" name="checkbox" id="checkbox">
+                <label for="checkbox">rember password</label><br>
+                <button type="submit" id="button">Login</button>
+            </form>
+        </div>
+        <div>
+           <nav class="navbar">
+    <div class="logo">MyBrand</div>
+    <ul class="nav-links">
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Services.html">Services</a></li>
+        <li><a href="#" class="active">Login</a></li>
+    </ul>
+</nav>
+        </div>
+    </div>
+    <script>
+const express = require('express');
+const app = express();
+const PORT = 3000;
+
+// Middleware to read JSON data from your form
+app.use(express.json());
+
+// This is a "Route" - it waits for someone to visit the login page
+app.post('Login.html', (req, res) => {
+    const { email, password } = req.body;
+
+    // In a real app, you would check the database here
+    if (email === "admin@example.com" && password === "1234") {
+        res.status(200).send({ message: "Login Successful!" });
+    } else {
+        res.status(401).send({ message: "Invalid Credentials" });
+    }
+});
+
+app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
+});
+</script>
+</body>
+</html>
